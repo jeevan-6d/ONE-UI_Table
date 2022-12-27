@@ -1,0 +1,77 @@
+{
+  "name": "6d-table",
+  "version": "0.6.0",
+  "source": "src/App.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "dependencies": {
+    "@oneui/6d-table": "^0.6.1",
+    "@oneui/auth-lib": "^0.3.0",
+    "@oneui/react-components": "^0.6.5",
+    "@oneui/react-scripts": "^4.0.3",
+    "bootstrap": "^4.5.2",
+    "css-loader": "^5.2.2",
+    "customize-cra": "^1.0.0",
+    "glob": "^7.1.6",
+    "immutability-helper": "^3.1.1",
+    "react": "^17.0.2",
+    "react-app-rewired": "^2.1.8",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0",
+    "react-dom": "^16.13.1",
+    "react-table": "^7.7.0",
+    "reactstrap": "^8.9.0",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-dev": "react-scripts build",
+    "build": "microbundle-crl --no-compress --format modern,es,cjs",
+    "build:react": "react-app-rewired build",
+    "build:bundle": "webpack --config webpack.config.js",
+    "coverage": "npm test -- --coverage"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-table)/"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@oneui/6d-base-theme": "1.7.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@testing-library/user-event": "^7.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
+    "microbundle-crl": "^0.13.10",
+    "react-test-renderer": "^16.13.1",
+    "react-tooltip": "^4.2.21",
+    "webpack-cli": "^4.6.0"
+  }
+}
